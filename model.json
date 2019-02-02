@@ -1,77 +1,77 @@
 {
-	"interactionModel": {
-		"languageModel": {
-			"invocationName": "stream it",
-			"intents": [{
-					"name": "AMAZON.FallbackIntent",
-					"samples": []
-				}, {
-					"name": "AMAZON.CancelIntent",
-					"samples": []
-				}, {
-					"name": "AMAZON.HelpIntent",
-					"samples": []
-				}, {
-					"name": "AMAZON.StopIntent",
-					"samples": []
-				}, {
-					"name": "StreamIntent",
-					"slots": [{
-							"name": "film",
-							"type": "AMAZON.SearchQuery",
-							"samples": [
-								"{film} please",
-								"{film}"
-							]
-						}
-					],
-					"samples": [
-						"where to watch {film}",
-						"where i can watch {film}",
-						"where to view {film}",
-						"where to see {film}",
-						"where i can find {film}",
-						" {film}",
-						"tell me where to stream {film}",
-						"where to stream {film}",
-						"where can i stream {film}",
-						"where i can stream {film}"
-					]
-				}, {
-					"name": "AMAZON.NavigateHomeIntent",
-					"samples": []
-				}
-			],
-			"types": []
-		},
-		"dialog": {
-			"intents": [{
-					"name": "StreamIntent",
-					"delegationStrategy": "ALWAYS",
-					"confirmationRequired": false,
-					"prompts": {},
-					"slots": [{
-							"name": "film",
-							"type": "AMAZON.SearchQuery",
-							"confirmationRequired": false,
-							"elicitationRequired": true,
-							"prompts": {
-								"elicitation": "Elicit.Slot.1543405314744.1137662426473"
-							}
-						}
-					]
-				}
-			],
-			"delegationStrategy": "ALWAYS"
-		},
-		"prompts": [{
-				"id": "Elicit.Slot.1543405314744.1137662426473",
-				"variations": [{
-						"type": "PlainText",
-						"value": "What do you want to watch?"
-					}
-				]
-			}
-		]
-	}
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "stream it",
+      "intents": [{
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        }, {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        }, {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        }, {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        }, {
+          "name": "StreamIntent",
+          "slots": [{
+              "name": "film",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{film} please",
+                "{film}"
+              ]
+            }
+          ],
+          "samples": [
+            "where to watch {film}",
+            "where i can watch {film}",
+            "where to view {film}",
+            "where to see {film}",
+            "where i can find {film}",
+            " {film}",
+            "tell me where to stream {film}",
+            "where to stream {film}",
+            "where can i stream {film}",
+            "where i can stream {film}"
+          ]
+        }, {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [{
+          "name": "StreamIntent",
+          "delegationStrategy": "ALWAYS",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [{
+              "name": "film",
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1543405314744.1137662426473"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [{
+        "id": "Elicit.Slot.1543405314744.1137662426473",
+        "variations": [{
+            "type": "PlainText",
+            "value": "What do you want to watch?"
+          }
+        ]
+      }
+    ]
+  }
 }
